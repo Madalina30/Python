@@ -10,11 +10,15 @@ print(sorted(lista, reverse=True))
 
 # afișarea numerelor pare din listă (folosind DOAR slice, altă metodă va fi considerată invalidă)
 
-print(lista[::2])
+for l in lista :
+    if l % 2 == 0:
+        print(l)
 
 # afișarea numerelor impare din listă (folosind DOAR slice, altă metodă va fi considerată invalidă)
 
-print(lista[1::2])
+for l in lista :
+    if l % 2 == 1:
+        print(l)
 
 # afișarea elementelor multipli ai lui 3
 print(lista[2], lista[4], lista[9])
