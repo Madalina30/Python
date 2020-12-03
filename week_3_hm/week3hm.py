@@ -19,7 +19,7 @@ def recursive_function_1(number):
     return recursive_function_1(number - 1) + number
 
 
-print(recursive_function_1(5))
+print(recursive_function_1(7))
 
 
 def recursive_function_2(number):
@@ -43,8 +43,23 @@ def recursive_function_3(number):
         return recursive_function_3(number - 1)
 
 
-print(recursive_function_3(4))
+print(recursive_function_3(7))
 
+# one function :
+
+def sums(number):
+    if number == 0:
+        return 0, 0, 0
+    totalSum, even_sum, odd_sum = sums(number - 1)
+    totalSum += number
+    if number % 2 == 0:
+        even_sum += number
+    else:
+        odd_sum += number
+    return totalSum, even_sum, odd_sum
+
+total_sum, even_sum, odd_sum = sums(7)
+print(total_sum, even_sum, odd_sum)
 
 # 3
 def val_intreg():
