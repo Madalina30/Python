@@ -47,19 +47,22 @@ print(recursive_function_3(7))
 
 # one function :
 
+
 def sums(number):
     if number == 0:
         return 0, 0, 0
-    totalSum, even_sum, odd_sum = sums(number - 1)
+    totalSum, evenSum, oddSum = sums(number - 1)
     totalSum += number
     if number % 2 == 0:
-        even_sum += number
+        evenSum += number
     else:
-        odd_sum += number
-    return totalSum, even_sum, odd_sum
+        oddSum += number
+    return totalSum, evenSum, oddSum
+
 
 total_sum, even_sum, odd_sum = sums(7)
 print(total_sum, even_sum, odd_sum)
+
 
 # 3
 def val_intreg():
